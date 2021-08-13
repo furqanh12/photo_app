@@ -1,4 +1,9 @@
 FactoryBot.define do
+  factory :album do
+    name { "MyString" }
+    privacy { 1 }
+  end
+
   factory :user do
     name { "Michael Example" }
     email { "michael@example.com" }

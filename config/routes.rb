@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'password_resets/new'
   get 'password_resets/edit'
-  root   'static_pages#home'
+  # root   'static_pages#home'
+  root   'home#index'
+
   get    '/help',    to: 'static_pages#help'
   get    '/about',   to: 'static_pages#about'
   get    '/contact', to: 'static_pages#contact'

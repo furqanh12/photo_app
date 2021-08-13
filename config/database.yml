@@ -3,23 +3,22 @@ default: &default
   timeout: 5000
 
 development:
-  <<: *default
-  adapter: sqlite3
-  database: db/development.sqlite3
-
-#development:
-#  <<: *default
-#  adapter: postgresql
-#  encoding: unicode
-#  host: db
-#  username: postgres
-#  password:
-#  database: sample_rails_app_db
+ <<: *default
+ adapter: postgresql
+ encoding: unicode
+ host: localhost
+ username: furqan
+ password: root
+ database: sample_rails_development
 
 test:
   <<: *default
-  adapter: sqlite3
-  database: db/test.sqlite3
+  adapter: postgresql
+  host: localhost
+  username: furqan
+  password: root
+  database: sample_rails_test
+
 
 #test:
 #  <<: *default
